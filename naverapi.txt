@@ -1,5 +1,0 @@
-clientID : bBIbdz0P823GUIwYl0pt
-clinetSecret : 80xY_ibK5k
-
-CORS 문제
-https://xiubindev.tistory.com/115
