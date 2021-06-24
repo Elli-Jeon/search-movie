@@ -1,12 +1,13 @@
 import React from 'react'
-import Counter from './component/counter'
-import Exam from './component/exam'
+import Logo from './component/logo';
+import DataArea from './component/dataArea';
+
 
 function App() {
     return (
         <div>
-            {/*<Counter initialValue={0}/>*/}
-            <Exam score={100}/>
+            <Logo/>
+            <DataArea/>
         </div>
     )
 }
