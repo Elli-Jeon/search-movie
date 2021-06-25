@@ -1,0 +1,30 @@
+.result{
+    display: flex;
+    align-items: center;
+    margin : 0.8rem 0;
+    position: relative;
+}
+
+.result img{
+    max-width: 7rem;
+    min-height: 6rem;
+    flex : 1;
+}
+
+.result span{
+    flex : 1;
+    text-align: center;
+    margin : 0 0.1rem;
+}
+
+.result span:last-child {
+    position: absolute;
+    right : 0.1rem;
+
+}
+
+.result span:last-child a{
+    color : black;
+    text-decoration: none;
+}
+

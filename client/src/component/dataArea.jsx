@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import ResultList from './resultlist';
 import styles from './dataArea.module.css'
 
 function DataArea() {
-    const [ data, setData ] = useState(null);
+    const [ data, setData ] = useState([]);
     const [ keyword, setKeyword ] = useState('');
     const [ search, setSearch ] = useState("");
     const [ loading, setLoading ] = useState(false);
@@ -32,9 +33,14 @@ function DataArea() {
                 setError(error);
             }
         }
-        search === "" ? console.log("아직 빈칸") : fetchData(search);
+        
+        if(search === ""){ // 맨처음 랜더링될 때 검색 안하기 위해서
+            return;
+        }
+        fetchData(search);
+
     },[search]);
-    console.log(data);
+    
 
     return (
         <div>
@@ -44,7 +50,7 @@ function DataArea() {
             </div>
             {error && <div>에러가 발생했습니다 : {error}</div>}
             {loading?(<div>Loading...</div>):(
-                data
+                <ResultList data={data}/>
             )}
         </div>
     )
