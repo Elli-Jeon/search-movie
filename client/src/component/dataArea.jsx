@@ -40,8 +40,8 @@ function DataArea() {
         fetchData(search);
 
     },[search]);
+    // search가 바뀔 때만 fetchData
     
-
     return (
         <div>
             <div className={styles.searchBox}>
