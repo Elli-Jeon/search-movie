@@ -32,3 +32,12 @@
     cursor: pointer;
     transform :translateX(15px);
 }
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10rem;
+    font-size : 5rem;
+    margin-top: 30vh;
+}

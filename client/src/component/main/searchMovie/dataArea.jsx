@@ -10,7 +10,6 @@ function DataArea() {
     const [ loading, setLoading ] = useState(false);
     const [ error, setError ] = useState("");
 
-    
     useEffect(()=>{
         const fetchData = async (search) => {
             try {
@@ -24,7 +23,8 @@ function DataArea() {
                         "X-Naver-Client-Secret" : process.env.REACT_APP_CLIENT_SECRET,
                     },
                     params : {
-                        query : `${search}`
+                        query : `${search}`,
+                        display : 100,
                     }
                 });
                 setData(response.data.items);
@@ -49,7 +49,7 @@ function DataArea() {
                 <button type="submit" onClick={()=>{setSearch(keyword)}}>Search</button>
             </div>
             {error && <div>에러가 발생했습니다 : {error}</div>}
-            {loading?(<div>Loading...</div>):(
+            {loading?(<div className={styles.loading}>Loading...</div>):(
                 <ResultList data={data}/>
             )}
         </div>
