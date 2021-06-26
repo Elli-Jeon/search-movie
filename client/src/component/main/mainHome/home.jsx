@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, Route,  BrowserRouter as Router } from 'react-router-dom'
-import DataArea from './dataArea'
+import DataArea from '../searchMovie/dataArea'
 import styles from './home.module.css'
 
 function Home() {
