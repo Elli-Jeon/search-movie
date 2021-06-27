@@ -6,6 +6,7 @@ import Home from './component/main/mainHome/home';
 import SearchBtn from './component/header/searchBtn';
 import ProfileBtn from './component/header/profileBtn';
 import PageNotFound from './component/header/pageNotFound';
+import Profile from './component/main/profile/profile';
 import './App.css'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
                 <Switch>
                     <Route path='/' exact component={Home}/>
                     <Route path='/search' component={DataArea}/>
+                    <Route path='/profile' component={Profile}/>
                     <Route component={PageNotFound}/>
                 </Switch>
             </main>

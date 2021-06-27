@@ -27,12 +27,12 @@ function ResultList({data}) {
             }
             newData.push(part);
         }
-        console.log(newData[currentPage]);
+        //console.log(newData);
     }
     
     return (
         <div>
-            {console.log(data)}
+            {/*console.log(data)*/}
             {(data.length !== 0) ? (
                 <div className={styles.navbar}>
                     <span>포스터</span>
@@ -46,10 +46,11 @@ function ResultList({data}) {
             )}
             {(newData.length !== 0) ? (
                 newData[currentPage].map(movie=>{
+                    if(movie === undefined) return;
                     id.current += 1;
                     return <Result key={id.current} movie={movie}/>
                 })
-            ) : (console.log("haha"))
+            ) : (console.log("No data yet"))
             }
             <div className={styles.pageNums}>
                 {newArr.map((index)=>{

@@ -5,7 +5,7 @@ function Result({movie}) {
     return (
         <div className={styles.result}>
             {movie.image ? (<img src={movie.image} alt=''/>) : (<img src='logo192.png' alt=''/>)}
-            <span>{movie.title.replace('<b>','').replace('</b>','')}</span>
+            <span>{movie.title.replaceAll('<b>','').replaceAll('</b>','')}</span>
             <span>{movie.director}</span>
             <span>{movie.actor}</span>
             <span>{movie.userRating}</span>
