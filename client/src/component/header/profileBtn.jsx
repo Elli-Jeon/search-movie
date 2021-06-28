@@ -3,7 +3,7 @@ import React from 'react'
 function ProfileBtn() {
     return (
         <div>
-            <button>Profile</button>
+            <button style={{color : 'white', fontWeight : 800}}>Profile</button>
         </div>
     )
 }

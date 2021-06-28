@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 function SearchBtn() {
     return (
         <div>
-            <button>Search</button>
+            <button style={{color : 'white', fontWeight : 800}}>Search</button>
         </div>
     )
 }

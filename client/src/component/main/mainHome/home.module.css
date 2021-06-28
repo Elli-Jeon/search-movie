@@ -1,0 +1,9 @@
+.posterInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color : white;
+    min-height: 40vh;
+    font-size : 4vh;
+}
