@@ -43,13 +43,12 @@ function Home() {
         <div>
             {/* 이렇게 바로 하면, data가 []일때 바로 랜더링되어서인지 undefined가 되어버림.. */}
             {/*<img src={'https://image.tmdb.org/t/p/original'+data[1].poster_path} alt='loading'/>*/}
-            {data.map((movie,index)=>{
+            {/*data.map((movie,index)=>{
+                return <TodayMovie key={index} movie={movie}/>
+            })*/}
+            {data.filter((movie,index) => index === 2).map((movie,index)=>{
                 return <TodayMovie key={index} movie={movie}/>
             })}
-            <div className={styles.posterInfo}>
-                <h1>Today's Hot Movie</h1>
-                <button>More Info</button>
-            </div>
             {/*요 위의 정보를 여기에 쓸지, 안 으로 옮길지..*/}
         </div>
     )

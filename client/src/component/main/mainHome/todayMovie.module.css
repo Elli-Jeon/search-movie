@@ -1,9 +1,28 @@
-.poster {
-    width : 100vw;
-    height : 100vh;
+.posterContainer {
+    max-height: 90vh;
     position: absolute;
     top : 0;
     left : 0;
+}
+
+.poster {
+    width : 100vw;
+    height : 140vh;
+
     z-index: -1;
     opacity: 0.8;
+    background-position: center;
+}
+
+.posterInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color : white;
+    min-height: 40vh;
+    font-size : 4vh;
+    position: absolute;
+    top : 20%;
+    left : 25%;
 }
