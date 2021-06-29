@@ -9,7 +9,8 @@ function Home() {
     const [ data, setData ] = useState([]);
     const [ error, setError ] = useState();
     const [ loading, setLoading ] = useState(false);
-    const [ poster, setPoster ] = useState('');
+    const [ poster, setPoster ] = useState(1);
+
     
     useEffect(()=>{
         const fetchData = async() => {
@@ -32,13 +33,26 @@ function Home() {
         fetchData();
     },[])
 
-    // useEffect 에 setTimeout 걸어서 포스터 변경
+    //useEffect 에 setTimeout 걸어서 포스터 변경
+    useEffect(()=>{
+        const timer = () => {
+            setTimeout(()=>{
+                if(poster === 19){
+                    setPoster(0);
+                } else {
+                    setPoster(poster + 1);
+                }
+            },3000)
+        }
+        timer();
+        console.log(poster);
+    })
 
 
     if(loading) return <p>Data is loading</p>
     if(error) return <p>Error</p>
 
-    console.log(data);
+    //console.log(data);
     return (
         <div>
             {/* 이렇게 바로 하면, data가 []일때 바로 랜더링되어서인지 undefined가 되어버림.. */}
@@ -46,7 +60,7 @@ function Home() {
             {/*data.map((movie,index)=>{
                 return <TodayMovie key={index} movie={movie}/>
             })*/}
-            {data.filter((movie,index) => index === 2).map((movie,index)=>{
+            {data.filter((movie,index) => index === poster).map((movie,index)=>{
                 return <TodayMovie key={index} movie={movie}/>
             })}
             {/*요 위의 정보를 여기에 쓸지, 안 으로 옮길지..*/}
