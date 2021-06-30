@@ -43,6 +43,7 @@ function Home() {
                     setPoster(poster + 1);
                 }
             },3000)
+            return poster;
         }
         timer();
         console.log(poster);
