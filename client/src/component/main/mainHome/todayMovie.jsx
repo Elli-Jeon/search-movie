@@ -12,4 +12,4 @@ function TodayMovie({movie}) {
         </div>
     )
 }
-export default TodayMovie
+export default React.memo(TodayMovie)

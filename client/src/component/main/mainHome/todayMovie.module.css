@@ -4,13 +4,16 @@
     top : 0;
     left : 0;
     z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .poster {
     width : 100vw;
     height : 140vh;
-    opacity: 0.8;
-    background-position: center;
+    opacity: 0.7;
+    background: center cover no-repeat;
 }
 
 .posterInfo {
@@ -20,8 +23,28 @@
     align-items: center;
     color : white;
     min-height: 40vh;
+    margin : auto 0 ;
     font-size : 4vh;
     position: absolute;
-    top : 20%;
-    left : 25%;
+}
+
+.posterInfo h1 {
+    font-size : 10vh;
+}
+
+.posterInfo button {
+    padding : 1rem;
+    width : 24rem;
+    outline: none;
+    font-size : 3rem;
+    font-weight: 800;
+    background: none;
+    cursor: pointer;
+    transition: all ease-in 200ms;
+    border : 3px solid red;
+    transform : skew(-15deg);
+}
+
+.posterInfo button:hover {
+    transform: scale(1.1);
 }

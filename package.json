@@ -1,8 +1,10 @@
 {
-  "private" : true,
+  "private": true,
   "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
     "concurrently": "^6.2.0",
-    "express": "^4.17.1",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.9"
   }
 }

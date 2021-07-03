@@ -57,6 +57,7 @@ function ResultList({data}) {
                     return (<button onClick={()=>setCurrentPage(index)} key={index+1}>{index+1}</button>)
                 })}
             </div>
+            {/* 현재 페이지에 색깔 칠해주는 거 어케하지..?*/}
         </div>
     )
 }

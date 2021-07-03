@@ -22,3 +22,20 @@
     font-size : 5rem;
     margin-top: 30vh;
 }
+
+.pageNums {
+    display: flex;
+    justify-content: center;
+    margin : 1rem;
+}
+
+.pageNums button {
+    margin : 0 0.2rem;
+    background: none;
+    outline: none;
+    border : 0.5px solid black;
+}
+
+.pageNums button:active {
+    border : 1px solid red;
+}
